@@ -1,9 +1,8 @@
-let nextWordId = 0
+export const LOG_ANSWER = 'LOG_ANSWER'
 
-export const addWord = (word) => {
+export const logAnswer = (answerWeighting) => {
   return {
-    type: 'ADD_WORD',
-    id: nextWordId++,
-    word
+    type: LOG_ANSWER,
+    weighting: answerWeighting
   }
 }

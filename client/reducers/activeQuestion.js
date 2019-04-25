@@ -1,0 +1,13 @@
+import LOG_ANSWER from '../actions'
+
+const activeQuestion = (activeQuestion = 0, action) => {
+  switch (action.type) {
+    case LOG_ANSWER:
+      return activeQuestion++
+
+    default:
+      return activeQuestion
+  }
+}
+
+export default activeQuestion
