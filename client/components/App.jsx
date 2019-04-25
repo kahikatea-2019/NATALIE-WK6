@@ -1,9 +1,8 @@
 import React from 'react'
-
 import Question from './Question'
 
 const App = () => (
-  <div className='app-container'>
+  <div className='app-container'> 
     <Question />
   </div>
 )
