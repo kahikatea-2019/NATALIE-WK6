@@ -1,7 +1,9 @@
-import {combineReducers} from 'redux'
+import { combineReducers } from 'redux'
 
-import words from './words'
+import chosenAnswers from './chosenAnswers'
+import activeQuestion from './activeQuestion'
 
 export default combineReducers({
-  words
+  chosenAnswers,
+  activeQuestion
 })
