@@ -1,4 +1,4 @@
-import LOG_ANSWER from '../actions'
+import { LOG_ANSWER } from '../actions/index'
 
 const activeQuestion = (activeQuestion = 0, action) => {
   switch (action.type) {
