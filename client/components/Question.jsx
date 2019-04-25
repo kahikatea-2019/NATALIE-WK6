@@ -40,8 +40,8 @@ function Question (props) {
     </Button>)
 
   return (
-    <Card className={classes.card}>
-      <CardContent>
+    <Card color='primary' className={classes.card}>
+      <CardContent title='question'>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
           Question:
         </Typography>

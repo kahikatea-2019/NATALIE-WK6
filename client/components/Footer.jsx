@@ -8,7 +8,7 @@ export default class Footer extends React.Component {
       <>
       <Grid container
         justify="center">
-        <Typography className='header' variant="p" gutterBottom>
+        <Typography className='header' variant="body2" gutterBottom>
           If you have any complaints regarding the content or results of this quiz, please consult Ete who was not available to screen this quiz for any potenital offenses. 
         </Typography>
       </Grid>
