@@ -8,6 +8,16 @@ import CardContent from '@material-ui/core/CardContent'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 
+import { quiz } from '../../data/data'
+
+const question = quiz.questions[0]
+
+// questions
+// { text '', options [ {answer '', weighting ''}
+// ,{answer '', weighting ''},
+// {answer '', weighting ''}]}
+// Need to get the text, then need to access options array, and get the answers value for each item, could res.body
+
 const styles = {
   card: {
     minWidth: 275
@@ -35,15 +45,22 @@ function Question (props) {
           Question:
         </Typography>
         <Typography variant="h5" component="h2">
-            What is your favourite animal?
+          {question.text}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Dog</Button>
-        <Button size="small">Wolf</Button>
-        <Button size="small">I love all animals, they are my friends</Button>
-        <Button size="small">Ocelot</Button>
-        <Button size="small">Bear</Button>
+        
+        <Button fullWidth={true}
+          size="medium">Dog</Button>
+
+        <Button fullWidth={true}
+          size="medium">Wolf</Button>
+        <Button fullWidth={true}
+          size="medium">I love all animals, they are my friends</Button>
+        <Button fullWidth={true}
+          size="medium">Ocelot</Button>
+        <Button fullWidth={true}
+          size="medium">Bear</Button>
       </CardActions>
     </Card>
   )
@@ -54,4 +71,3 @@ Question.propTypes = {
 }
 
 export default withStyles(styles)(Question)
-
