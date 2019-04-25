@@ -12,12 +12,6 @@ import { quiz } from '../../data/data'
 
 const question = quiz.questions[0]
 
-// questions
-// { text '', options [ {answer '', weighting ''}
-// ,{answer '', weighting ''},
-// {answer '', weighting ''}]}
-// Need to get the text, then need to access options array, and get the answers value for each item, could res.body
-
 const styles = {
   card: {
     minWidth: 275
@@ -37,6 +31,13 @@ const styles = {
 
 function Question (props) {
   const { classes } = props
+  const quizAnswers = question.options.map(item =>
+    <Button
+      key={item.answer}
+      fullWidth={true}
+      size="medium">
+      {item.answer}
+    </Button>)
 
   return (
     <Card className={classes.card}>
@@ -49,18 +50,7 @@ function Question (props) {
         </Typography>
       </CardContent>
       <CardActions>
-        
-        <Button fullWidth={true}
-          size="medium">Dog</Button>
-
-        <Button fullWidth={true}
-          size="medium">Wolf</Button>
-        <Button fullWidth={true}
-          size="medium">I love all animals, they are my friends</Button>
-        <Button fullWidth={true}
-          size="medium">Ocelot</Button>
-        <Button fullWidth={true}
-          size="medium">Bear</Button>
+        {quizAnswers}
       </CardActions>
     </Card>
   )
