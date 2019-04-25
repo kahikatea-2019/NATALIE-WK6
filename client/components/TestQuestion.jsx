@@ -1,5 +1,5 @@
 import React from 'react'
-import { logAnswer, quizStart, quizEnd, quizReset } from '../actions'
+import { logAnswer, quizStart, quizEnd, quizReset, nextAnswer, nextQuestion, checkQuizStatus } from '../actions'
 import { connect } from 'react-redux'
 
 class TestQuestion extends React.Component {
@@ -8,6 +8,7 @@ class TestQuestion extends React.Component {
     return (
       <div>
         <button onClick={() => dispatch(logAnswer('Bryce'))}>x</button>
+        <button onClick={() => dispatch(checkQuizStatus(activeQuestion, 4))}>Check</button>
         <p>{activeQuestion}</p>
         <button onClick={() => dispatch(quizStart())}>start</button>
         <p>{activeQuestion}</p>
