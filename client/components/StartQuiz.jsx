@@ -8,8 +8,8 @@ export default class Header extends React.Component {
       <>
       <Grid container
         justify="center">
-        <Typography className='header' variant="h1" gutterBottom>
-          Natalie's Quiz
+        <Typography variant= 'button' color='primary' className='header' variant="h1" gutterBottom>
+          START QUIZ
         </Typography>
       </Grid>
       </>
