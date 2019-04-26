@@ -13,11 +13,11 @@ export const quiz = {
     {
       text: 'What is your favourite food?',
       options: [
-        { answer: 'dog', weighting: 'Emily' },
-        { answer: 'wolf', weighting: 'Chris' },
-        { answer: 'potatoes', weighting: 'Bryce' },
-        { answer: 'Elephants', weighting: 'Don' },
-        { answer: 'bear', weighting: 'Dougal' }
+        { answer: 'Butter chicken', weighting: 'Emily' },
+        { answer: 'Chicken butter rice', weighting: 'Chris' },
+        { answer: 'Rabbit food', weighting: 'Bryce' },
+        { answer: 'Roast Vegetables', weighting: 'Don' },
+        { answer: 'Pizza', weighting: 'Dougal' }
       ]
     },
     {
@@ -47,7 +47,7 @@ export const quiz = {
         { answer: 'Vape outside', weighting: 'Chris' },
         { answer: 'Pretend to not hear students and have headphones in', weighting: 'Bryce' },
         { answer: '', weighting: 'Don' },
-        { answer: 'Laughing all day long', weighting: 'Dougal' }
+        { answer: 'Laugh all day long', weighting: 'Dougal' }
       ]
     },
     {
@@ -76,7 +76,7 @@ export const quiz = {
         { answer: 'Drove, blasting pump-up music', weighting: 'Emily' },
         { answer: 'Drove here in my mercedes', weighting: 'Chris' },
         { answer: 'Biked', weighting: 'Bryce' },
-        { answer: 'Ran', weighting: 'Don' },
+        { answer: 'Hoverboarded', weighting: 'Don' },
         { answer: 'Walked', weighting: 'Dougal' }
       ]
     },
@@ -86,7 +86,7 @@ export const quiz = {
         { answer: 'I listen to Billie Eilish ', weighting: 'Emily' },
         { answer: 'Six60 and Homebrew', weighting: 'Chris' },
         { answer: 'Matt Corby/Jeff Buckley', weighting: 'Bryce' },
-        { answer: 'I listen to my own mixtape', weighting: 'Don' },
+        { answer: 'I listen to my own mixtape, probably something psytrance', weighting: 'Don' },
         { answer: 'Anything from Death row Records', weighting: 'Dougal' }
       ]
     },
@@ -104,23 +104,28 @@ export const quiz = {
   results: [
     {
       title: 'Emily',
-      description: 'Congrats, you\re a total Emily.'
+      description: 'Congrats, you\'re a total Emily.',
+      img: './emily.jpg'
     },
     {
       title: 'Chris',
-      description: 'Wow! You\re such a Chris! Don\t forget that box on the way home!'
+      description: 'Wow! You\'re such a Chris! Don\t forget that box on the way home!',
+      img: './chris.jpg'
     },
     {
       title: 'Bryce',
-      description: 'Holy smokes, you\re a Bryce! Stock up on some trail mix, you\ve got a big hike tomorrow!'
+      description: 'Holy smokes, you\'re a Bryce! Stock up on some trail mix, you\ve got a big hike tomorrow!',
+      img: './bryce.jpg'
     },
     {
       title: 'Don',
-      description: '"But Don, how could I be anything except a Don?"'
+      description: '"But Don, how could I be anything except a Don?"',
+      img: './Don.jpg'
     },
     {
       title: 'Dougal',
-      description: 'Do'
+      description: 'Nga mihi! You\'re the ultimate people person!',
+      img: './dougal.jpg'
     }
   ]
 }
