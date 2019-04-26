@@ -30,10 +30,22 @@ const styles = {
   }
 }
 
+const shuffle = (array) => {
+  return array.map((a) => ({ sort: Math.random(), value: a }))
+    .sort((a, b) => a.sort - b.sort)
+    .map((a) => a.value)
+}
+const shuffledQuiz = {}
+shuffledQuiz.questions = quiz.questions.map(question => {
+  question.options = shuffle(question.options)
+  return question
+}
+)
+
 function Question (props) {
   const { classes, dispatch, activeQuestion } = props
-  const question = quiz.questions[activeQuestion]
-  const totalQuestions = quiz.questions.length
+  const question = shuffledQuiz.questions[activeQuestion]
+  const totalQuestions = shuffledQuiz.questions.length
   const quizAnswers = question.options.map(item =>
     <Button
       key={item.answer}
@@ -46,6 +58,7 @@ function Question (props) {
       color='secondary'>
       {item.answer}
     </Button>
+
   )
 
   return (
