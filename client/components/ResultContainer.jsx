@@ -2,7 +2,9 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { quiz } from '../../data/data'
 
-class Result extends React.Component {
+import Result from './Result'
+
+class ResultContainer extends React.Component {
   calculateResult (chosenAnswers, results) {
     const answerTotals = []
 
@@ -32,11 +34,10 @@ class Result extends React.Component {
     const { chosenAnswers } = this.props
     const resultList = this.calculateResult(chosenAnswers, results)
     const resultsDisplay = resultList.map(result => (
-      <h1 key={result}>{result}</h1>
+      <Result key={result} result={result} />
     ))
     return (
       <>
-        <h1>RESULTTTTT YO</h1>
         {resultsDisplay}
       </>
     )
@@ -49,4 +50,4 @@ function mapStateToProps (state) {
   }
 }
 
-export default connect(mapStateToProps)(Result)
+export default connect(mapStateToProps)(ResultContainer)

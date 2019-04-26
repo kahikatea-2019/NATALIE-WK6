@@ -114,13 +114,13 @@ export const quiz = {
     },
     {
       title: 'Bryce',
-      description: 'Holy smokes, you\'re a Bryce! Stock up on some trail mix, you\ve got a big hike tomorrow!',
+      description: 'Holy smokes, you\'re a Bryce! Stock up on some trail mix, you\'ve got a big hike tomorrow!',
       img: './bryce.jpg'
     },
     {
       title: 'Don',
       description: '"But Don, how could I be anything except a Don?"',
-      img: './Don.jpg'
+      img: './don.jpg'
     },
     {
       title: 'Dougal',
