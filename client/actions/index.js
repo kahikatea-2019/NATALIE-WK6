@@ -37,7 +37,7 @@ export const quizReset = () => {
 
 export function checkQuizStatus (activeQuestion, totalQuestions) {
   return (dispatch) => {
-    if (activeQuestion === totalQuestions) {
+    if (activeQuestion === totalQuestions - 1) {
       dispatch(quizEnd())
     } else {
       dispatch(nextQuestion())
