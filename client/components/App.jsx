@@ -5,7 +5,7 @@ import Question from './Question'
 import Header from './Header'
 import Footer from './Footer'
 import StartQuiz from './StartQuiz'
-import Result from './Result'
+import Result from './ResultContainer'
 
 // Material UI imports
 import Grid from '@material-ui/core/Grid'
