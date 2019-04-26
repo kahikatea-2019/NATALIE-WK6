@@ -23,7 +23,7 @@ const styles = {
     transform: 'scale(0.8)'
   },
   title: {
-    fontSize: 14
+    fontSize: 20
   },
   pos: {
     marginBottom: 12
@@ -43,8 +43,10 @@ function Question (props) {
         dispatch(logAnswer(item.weighting))
         dispatch(checkQuizStatus(activeQuestion, totalQuestions))
       }}>
+      color='secondary'>
       {item.answer}
-    </Button>)
+    </Button>
+  )
 
   return (
     <Card color='primary' className={classes.card}>
@@ -57,7 +59,9 @@ function Question (props) {
         </Typography>
       </CardContent>
       <CardActions>
-        {quizAnswers}
+        <ul>
+          {quizAnswers}
+        </ul>
       </CardActions>
     </Card>
   )

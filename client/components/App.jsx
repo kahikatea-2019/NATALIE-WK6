@@ -8,25 +8,26 @@ import StartQuiz from './StartQuiz'
 import Result from './Result'
 
 // Material UI imports
-import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 
 const App = props => {
   const { quizStatus } = props
   return (
-    <Grid>
-      <StartQuiz />
-      <Header />
-      {quizStatus === 'waiting' && <StartQuiz />}
+   <Grid
+    container
+    direction="row"
+    justify="center"
+    alignitems="center"
+    className="display">
+     {quizStatus === 'waiting' && <StartQuiz />}
       {quizStatus === 'inProgress' && <Question />}
-      {quizStatus === 'ended' && <Result />}
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-      <Footer />
-    </Grid>
+     {quizStatus === 'ended' && <Result />}
+
+  </Grid>
   )
 }
 
-function mapStateToProps (state) {
+  function mapStateToProps (state) {
   return {
     quizStatus: state.quizStatus
   }
