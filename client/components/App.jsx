@@ -13,21 +13,21 @@ import Grid from '@material-ui/core/Grid'
 const App = props => {
   const { quizStatus } = props
   return (
-   <Grid
-    container
-    direction="row"
-    justify="center"
-    alignitems="center"
-    className="display">
-     {quizStatus === 'waiting' && <StartQuiz />}
+    <Grid
+      container
+      direction="row"
+      justify="center"
+      alignitems="center"
+      className="display">
+      {quizStatus === 'waiting' && <StartQuiz />}
       {quizStatus === 'inProgress' && <Question />}
-     {quizStatus === 'ended' && <Result />}
+      {quizStatus === 'ended' && <Result />}
 
-  </Grid>
+    </Grid>
   )
 }
 
-  function mapStateToProps (state) {
+function mapStateToProps (state) {
   return {
     quizStatus: state.quizStatus
   }

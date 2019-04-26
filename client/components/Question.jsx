@@ -42,7 +42,7 @@ function Question (props) {
       onClick={() => {
         dispatch(logAnswer(item.weighting))
         dispatch(checkQuizStatus(activeQuestion, totalQuestions))
-      }}>
+      }}
       color='secondary'>
       {item.answer}
     </Button>
