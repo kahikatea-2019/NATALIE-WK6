@@ -62,7 +62,7 @@ function Question (props) {
   )
 
   return (
-    <Card color='primary' className={classes.card}>
+    <Card color='primary' className='card'>
       <CardContent title='question'>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
           Question:

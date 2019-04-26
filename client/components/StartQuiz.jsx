@@ -10,9 +10,10 @@ class Header extends React.Component {
     const { dispatch } = this.props
     return (
       <>
-      <Grid container
+      <Grid
+        container
         justify="center">
-        <Typography variant= 'button' color='primary' className='header' variant="h1" gutterBottom
+        <Typography justify="center" color='primary' className='header' variant="h1" gutterBottom
           onClick={() => dispatch(quizStart())}>
           START QUIZ
         </Typography>
