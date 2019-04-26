@@ -109,12 +109,12 @@ export const quiz = {
     },
     {
       title: 'Chris',
-      description: 'Wow! You\'re such a Chris! Don\t forget that box on the way home!',
+      description: 'Wow! You\'re such a Chris! Don\'t forget that box on the way home!',
       img: './chris.jpg'
     },
     {
       title: 'Bryce',
-      description: 'Holy smokes, you\'re a Bryce! Stock up on some trail mix, you\ve got a big hike tomorrow!',
+      description: 'Holy smokes, you\'re a Bryce! Stock up on some trail mix, you\'ve got a big hike tomorrow!',
       img: './bryce.jpg'
     },
     {
