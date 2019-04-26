@@ -120,7 +120,7 @@ export const quiz = {
     {
       title: 'Don',
       description: '"But Don, how could I be anything except a Don?"',
-      img: './Don.jpg'
+      img: './don.jpg'
     },
     {
       title: 'Dougal',

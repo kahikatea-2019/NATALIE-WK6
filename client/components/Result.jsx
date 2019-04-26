@@ -20,9 +20,8 @@ const styles = {
   }
 }
 
-const resultsCard = quiz.results[0]
-
 function Result (props) {
+  const resultsCard = quiz.results.find(result => result.title === props.result)
   const { classes } = props
 
   return (
