@@ -104,17 +104,17 @@ export const quiz = {
   results: [
     {
       title: 'Emily',
-      description: 'Congrats, you\re a total Emily.',
+      description: 'Congrats, you\'re a total Emily.',
       img: './emily.jpg'
     },
     {
       title: 'Chris',
-      description: 'Wow! You\re such a Chris! Don\t forget that box on the way home!',
+      description: 'Wow! You\'re such a Chris! Don\t forget that box on the way home!',
       img: './chris.jpg'
     },
     {
       title: 'Bryce',
-      description: 'Holy smokes, you\re a Bryce! Stock up on some trail mix, you\ve got a big hike tomorrow!',
+      description: 'Holy smokes, you\'re a Bryce! Stock up on some trail mix, you\ve got a big hike tomorrow!',
       img: './bryce.jpg'
     },
     {
@@ -124,7 +124,7 @@ export const quiz = {
     },
     {
       title: 'Dougal',
-      description: 'Nga mihi! You\re the ultimate people person!',
+      description: 'Nga mihi! You\'re the ultimate people person!',
       img: './dougal.jpg'
     }
   ]
