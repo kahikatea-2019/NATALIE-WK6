@@ -1,4 +1,7 @@
 import React from 'react'
+import { connect } from 'react-redux'
+
+// Material UI imports
 import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
@@ -8,6 +11,8 @@ import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
+
+import { quizReset } from '../actions'
 
 import { quiz } from '../../data/data'
 
@@ -22,7 +27,7 @@ const styles = {
 
 function Result (props) {
   const resultsCard = quiz.results.find(result => result.title === props.result)
-  const { classes } = props
+  const { classes, dispatch } = props
 
   return (
     <Card className={classes.card}>
@@ -41,7 +46,7 @@ function Result (props) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="large" color="primary">
+        <Button size="large" color="primary" onClick={() => dispatch(quizReset())}>
           Take the quiz again
         </Button>
         <Button size="large" color="primary" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
@@ -56,5 +61,4 @@ Result.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(styles)(Result)
-
+export default connect()(withStyles(styles)(Result))

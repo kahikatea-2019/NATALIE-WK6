@@ -105,27 +105,27 @@ export const quiz = {
     {
       title: 'Emily',
       description: 'Congrats, you\'re a total Emily.',
-      img: './emily.jpg'
+      img: './image/emily.jpg'
     },
     {
       title: 'Chris',
       description: 'Wow! You\'re such a Chris! Don\'t forget that box on the way home!',
-      img: './chris.jpg'
+      img: './image/chris.jpg'
     },
     {
       title: 'Bryce',
       description: 'Holy smokes, you\'re a Bryce! Stock up on some trail mix, you\'ve got a big hike tomorrow!',
-      img: './bryce.jpg'
+      img: './image/bryce.jpg'
     },
     {
       title: 'Don',
       description: '"But Don, how could I be anything except a Don?"',
-      img: './don.jpg'
+      img: './image/don.jpg'
     },
     {
       title: 'Dougal',
       description: 'Nga mihi! You\'re the ultimate people person!',
-      img: './dougal.jpg'
+      img: './image/dougal.jpg'
     }
   ]
 }

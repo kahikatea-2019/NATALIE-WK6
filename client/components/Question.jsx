@@ -1,8 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { logAnswer, checkQuizStatus } from '../actions'
-
+// Material UI imports
 import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
@@ -10,6 +9,8 @@ import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
+
+import { logAnswer, checkQuizStatus } from '../actions'
 
 import { quiz } from '../../data/data'
 
@@ -30,6 +31,7 @@ const styles = {
   }
 }
 
+// shuffle the order of quiz questions
 const shuffle = (array) => {
   return array.map((a) => ({ sort: Math.random(), value: a }))
     .sort((a, b) => a.sort - b.sort)
@@ -39,8 +41,7 @@ const shuffledQuiz = {}
 shuffledQuiz.questions = quiz.questions.map(question => {
   question.options = shuffle(question.options)
   return question
-}
-)
+})
 
 function Question (props) {
   const { classes, dispatch, activeQuestion } = props
@@ -58,7 +59,6 @@ function Question (props) {
       color='secondary'>
       {item.answer}
     </Button>
-
   )
 
   return (
