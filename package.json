@@ -32,7 +32,6 @@
   "dependencies": {
     "@material-ui/core": "^3.9.3",
     "express": "^4.16.4",
-    "redux-thunk": "^2.3.0",
-    "shuffle-array": "^1.0.1"
+    "redux-thunk": "^2.3.0"
   }
 }
