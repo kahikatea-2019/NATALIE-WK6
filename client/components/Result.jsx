@@ -13,10 +13,10 @@ import { quiz } from '../../data/data'
 
 const styles = {
   card: {
-    maxWidth: 345
+    maxWidth: 450
   },
   media: {
-    height: 240
+    height: 360
   }
 }
 
@@ -25,7 +25,7 @@ function Result (props) {
   const { classes } = props
 
   return (
-    <Card className={classes.card}>
+    <Card className={classes.card} m={10}>
       <CardActionArea>
         <CardMedia
           className={classes.media}

@@ -46,7 +46,7 @@ export const quiz = {
         { answer: 'Talk about how the plants are always dying', weighting: 'Emily' },
         { answer: 'Vape outside', weighting: 'Chris' },
         { answer: 'Pretend to not hear students and have headphones in', weighting: 'Bryce' },
-        { answer: '', weighting: 'Don' },
+        { answer: 'Coding, and looking good while doing it', weighting: 'Don' },
         { answer: 'Laugh all day long', weighting: 'Dougal' }
       ]
     },
@@ -109,7 +109,7 @@ export const quiz = {
     },
     {
       title: 'Chris',
-      description: 'Wow! You\'re such a Chris! Don\'t forget that box on the way home!',
+      description: 'Wow! You\'re such a Chris! Don\'t forget your beers on the way home!',
       img: './chris.jpg'
     },
     {

@@ -10,13 +10,14 @@
   text-align: center;
 }
 
-.header {
+#header {
   cursor: pointer;
   margin: 0;
   position: absolute;
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  font-family: 'Rubik Mono One';
 }
 
 .card{
@@ -27,3 +28,4 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+

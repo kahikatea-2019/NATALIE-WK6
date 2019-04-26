@@ -13,9 +13,9 @@ class Header extends React.Component {
       <Grid
         container
         justify="center">
-        <Typography justify="center" color='primary' className='header' variant="h1" gutterBottom
+        <Typography justify="center" color='primary' id='header' variant="h2" gutterBottom
           onClick={() => dispatch(quizStart())}>
-          START QUIZ
+          Which EDA staff member are you?
         </Typography>
       </Grid>
       </>
