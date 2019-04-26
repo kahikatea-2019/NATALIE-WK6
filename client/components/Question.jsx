@@ -1,4 +1,7 @@
 import React from 'react'
+import { connect } from 'react-redux'
+
+import { logAnswer, checkQuizStatus } from '../actions'
 
 import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core/styles'
@@ -9,8 +12,6 @@ import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 
 import { quiz } from '../../data/data'
-
-const question = quiz.questions[0]
 
 const styles = {
   card: {
@@ -30,12 +31,18 @@ const styles = {
 }
 
 function Question (props) {
-  const { classes } = props
+  const { classes, dispatch, activeQuestion } = props
+  const question = quiz.questions[activeQuestion]
+  const totalQuestions = quiz.questions.length
   const quizAnswers = question.options.map(item =>
     <Button
       key={item.answer}
       fullWidth={true}
       size="medium"
+      onClick={() => {
+        dispatch(logAnswer(item.weighting))
+        dispatch(checkQuizStatus(activeQuestion, totalQuestions))
+      }}>
       color='secondary'>
       {item.answer}
     </Button>
@@ -64,4 +71,11 @@ Question.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(styles)(Question)
+function mapStateToProps (state) {
+  return {
+    activeQuestion: state.activeQuestion,
+    quizStatus: state.quizStatus
+  }
+}
+
+export default connect(mapStateToProps)(withStyles(styles)(Question))

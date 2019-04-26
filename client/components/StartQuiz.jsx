@@ -2,13 +2,18 @@ import React from 'react'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 
-export default class Header extends React.Component {
+import { connect } from 'react-redux'
+import { quizStart } from '../actions'
+
+class Header extends React.Component {
   render () {
+    const { dispatch } = this.props
     return (
       <>
       <Grid container
         justify="center">
-        <Typography variant= 'button' color='primary' className='header' variant="h1" gutterBottom>
+        <Typography variant= 'button' color='primary' className='header' variant="h1" gutterBottom
+          onClick={() => dispatch(quizStart())}>
           START QUIZ
         </Typography>
       </Grid>
@@ -16,3 +21,5 @@ export default class Header extends React.Component {
     )
   }
 }
+
+export default connect()(Header)
