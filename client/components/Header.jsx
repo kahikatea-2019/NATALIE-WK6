@@ -9,7 +9,7 @@ export default class Header extends React.Component {
       <Grid container
         justify="center">
         <Typography className='header' variant="h1" gutterBottom>
-          Natalie's Quiz
+          WHICH EDA STAFF MEMBER ARE YOU?
         </Typography>
       </Grid>
       </>
