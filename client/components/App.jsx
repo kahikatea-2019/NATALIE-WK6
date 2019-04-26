@@ -1,11 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+// components
 import Question from './Question'
-import Header from './Header'
-import Footer from './Footer'
 import StartQuiz from './StartQuiz'
-import Result from './ResultContainer'
+import ResultContainer from './ResultContainer'
 
 // Material UI imports
 import Grid from '@material-ui/core/Grid'
@@ -21,7 +20,7 @@ const App = props => {
       className="display">
       {quizStatus === 'waiting' && <StartQuiz />}
       {quizStatus === 'inProgress' && <Question />}
-      {quizStatus === 'ended' && <Result />}
+      {quizStatus === 'ended' && <ResultContainer />}
 
     </Grid>
   )

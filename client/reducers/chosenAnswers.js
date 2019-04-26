@@ -1,4 +1,4 @@
-import { LOG_ANSWER } from '../actions/index'
+import { LOG_ANSWER, QUIZ_RESET } from '../actions/index'
 
 const chosenAnswers = (chosenAnswers = [], action) => {
   switch (action.type) {
@@ -7,6 +7,9 @@ const chosenAnswers = (chosenAnswers = [], action) => {
         ...chosenAnswers,
         action.weighting
       ]
+
+    case QUIZ_RESET:
+      return []
 
     default:
       return chosenAnswers
